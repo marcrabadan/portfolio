@@ -286,12 +286,22 @@
               <li>Led design and implementation of <strong>Python microservices on Kubernetes</strong>, enabling horizontal autoscaling and zero-downtime deployments via Helm.</li>
               <li>Introduced <strong>Event Sourcing</strong> to support near real-time analytics, full auditability of event flows, and improved incident debugging and traceability.</li>
               <li>Acted as technical authority across multiple teams: leading architecture reviews, mentoring engineers, and unblocking complex system-level decisions.</li>
+              <li>Designed and built the <strong>Data Visualization Layer (DVL)</strong>, a multi-tenant real-time analytics platform powering embedded dashboards inside Telavox's products. Chose to build over off-the-shelf tools (Grafana, Cube.js, TrinoDB) because none combined server-side tenant isolation with change-aware live data and embeddability.</li>
+              <li>Architected pluggable data drivers (Elasticsearch, MySQL, BigQuery) and a <strong>declarative YAML widget catalogue</strong> — new dashboards ship without code changes.</li>
+              <li>Built a <strong>WebSocket live layer</strong> using shared async polling tasks per widget key, reducing concurrent query cost by orders of magnitude vs per-viewer polling.</li>
+              <li>Enforced <strong>multi-tenant isolation at the data layer</strong> via JWT-derived WHERE injection that cannot be bypassed by callers.</li>
             </ul>
             <div class="timeline-tags">
               <span class="tag-sm">Python</span>
+              <span class="tag-sm">FastAPI</span>
+              <span class="tag-sm">Pydantic v2</span>
               <span class="tag-sm">Kubernetes</span>
               <span class="tag-sm">RabbitMQ</span>
               <span class="tag-sm">Event Sourcing</span>
+              <span class="tag-sm">WebSockets</span>
+              <span class="tag-sm">Elasticsearch</span>
+              <span class="tag-sm">BigQuery</span>
+              <span class="tag-sm">Redis</span>
               <span class="tag-sm">Helm</span>
               <span class="tag-sm">Prometheus</span>
               <span class="tag-sm">Grafana</span>
@@ -364,6 +374,37 @@
     <div class="container">
       <h2 class="section-title">Selected Projects</h2>
       <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Data Visualization Layer (DVL)</h3>
+            <span class="project-company">Telavox AB</span>
+          </div>
+          <p class="project-desc">
+            Multi-tenant, real-time analytics platform built from scratch to power embedded,
+            customer-facing dashboards inside Telavox's products. Designed as a deliberate
+            alternative to Grafana, Cube.js, and TrinoDB — none combined server-side tenant
+            isolation, change-aware live data over WebSocket, and clean embeddability.
+          </p>
+          <div class="project-highlights">
+            <span class="highlight">Server-side tenant isolation</span>
+            <span class="highlight">WebSocket live data</span>
+            <span class="highlight">Declarative YAML catalogue</span>
+          </div>
+          <div class="project-tags">
+            <span class="tag-sm">Python</span>
+            <span class="tag-sm">FastAPI</span>
+            <span class="tag-sm">Pydantic v2</span>
+            <span class="tag-sm">Elasticsearch</span>
+            <span class="tag-sm">MySQL</span>
+            <span class="tag-sm">BigQuery</span>
+            <span class="tag-sm">Redis</span>
+            <span class="tag-sm">WebSockets</span>
+            <span class="tag-sm">React</span>
+            <span class="tag-sm">TypeScript</span>
+            <span class="tag-sm">Kubernetes</span>
+          </div>
+        </div>
 
         <div class="project-card">
           <div class="project-header">
