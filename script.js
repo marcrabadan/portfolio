@@ -36,6 +36,40 @@ const updateActiveNav = () => {
 window.addEventListener('scroll', updateActiveNav, { passive: true });
 updateActiveNav();
 
+// Hero typewriter
+const typewriterEl = document.getElementById('typewriter');
+if (typewriterEl) {
+  const phrases = [
+    'Distributed Systems',
+    'Event-Driven Platforms',
+    'Kubernetes at Scale',
+    'Real-Time Analytics',
+    'Platform Engineering',
+  ];
+  let phraseIdx = 0;
+  let charIdx = 0;
+  let deleting = false;
+
+  const type = () => {
+    const phrase = phrases[phraseIdx];
+    charIdx += deleting ? -1 : 1;
+    typewriterEl.textContent = phrase.slice(0, charIdx);
+
+    let delay = deleting ? 40 : 75;
+    if (!deleting && charIdx === phrase.length) {
+      delay = 2200;
+      deleting = true;
+    } else if (deleting && charIdx === 0) {
+      deleting = false;
+      phraseIdx = (phraseIdx + 1) % phrases.length;
+      delay = 350;
+    }
+    setTimeout(type, delay);
+  };
+
+  type();
+}
+
 // Fade-in on scroll via IntersectionObserver
 const observer = new IntersectionObserver(
   entries => {

@@ -43,9 +43,15 @@
   <section id="hero">
     <div class="container hero-container">
       <div class="hero-content">
-        <p class="hero-eyebrow">Hi, I'm</p>
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          Open to Staff / Principal roles
+        </div>
         <h1>Marc Rabadán<br><span class="hero-accent">Fuertes</span></h1>
-        <p class="hero-role">Staff Software Engineer – Platform &amp; Distributed Systems</p>
+        <p class="hero-role">
+          <span class="hero-role-prefix">Staff Software Engineer ·</span>
+          <span id="typewriter"></span><span class="type-cursor"></span>
+        </p>
         <p class="hero-tagline">
           Designing, scaling, and operating cloud-native, event-driven platforms that process
           <strong>10M+ events per day</strong> with strong guarantees around reliability,
@@ -64,20 +70,23 @@
         </div>
       </div>
       <div class="hero-visual">
-        <div class="hero-card">
-          <div class="hero-stat">
-            <span class="stat-num">10+</span>
-            <span class="stat-label">Years Experience</span>
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span class="t-dot t-red"></span>
+            <span class="t-dot t-yellow"></span>
+            <span class="t-dot t-green"></span>
+            <span class="terminal-title">marc@barcelona — zsh</span>
           </div>
-          <div class="stat-divider"></div>
-          <div class="hero-stat">
-            <span class="stat-num">10M+</span>
-            <span class="stat-label">Events / Day</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="hero-stat">
-            <span class="stat-num">99.9%</span>
-            <span class="stat-label">Uptime Mindset</span>
+          <div class="terminal-body">
+            <p><span class="t-prompt">$</span> whoami</p>
+            <p class="t-out">staff-engineer · platform &amp; distributed-systems</p>
+            <p><span class="t-prompt">$</span> uptime --career</p>
+            <p class="t-out">10+ years in production</p>
+            <p><span class="t-prompt">$</span> kubectl top platform</p>
+            <p class="t-out"><span class="t-key">events/day:</span> 10M+&nbsp;&nbsp;<span class="t-key">availability:</span> 99.9%</p>
+            <p><span class="t-prompt">$</span> stack --core</p>
+            <p class="t-out">python · kafka · rabbitmq · kubernetes</p>
+            <p><span class="t-prompt">$</span> <span class="t-blink">▊</span></p>
           </div>
         </div>
       </div>
@@ -496,7 +505,37 @@
 
         <div class="project-card">
           <div class="project-header">
-            <h3>0xAttackFlow</h3>
+            <h3>Praxis</h3>
+            <span class="project-company">Personal / Open Source</span>
+          </div>
+          <p class="project-desc">
+            A skill factory and shared library for AI coding agents: captures how a team does
+            things — processes, conventions, roles — once, in a format Claude Code reads and
+            applies consistently across every project. Ships 13 SDLC expert personas (architect,
+            developer, QA, security…), a meta-skill for authoring new skills, a versioned memory
+            ledger that survives across sessions, and an always-on harness mode with
+            human-in-the-loop gates and deterministic validators. Distributed as a Claude Code
+            plugin marketplace, with generated integrations for Cursor, IntelliJ, and OpenAI Codex.
+          </p>
+          <div class="project-highlights">
+            <span class="highlight">13 SDLC expert skills</span>
+            <span class="highlight">Versioned memory ledger</span>
+            <span class="highlight">Harness mode</span>
+          </div>
+          <div class="project-tags">
+            <span class="tag-sm">Claude Code</span>
+            <span class="tag-sm">AI Agents</span>
+            <span class="tag-sm">Python</span>
+            <span class="tag-sm">Cursor</span>
+            <span class="tag-sm">IntelliJ</span>
+            <span class="tag-sm">OpenAI Codex</span>
+          </div>
+          <a href="https://marcrabadan.github.io/praxis/" class="project-link" target="_blank" rel="noopener">marcrabadan.github.io/praxis &rarr;</a>
+        </div>
+
+        <div class="project-card">
+          <div class="project-header">
+            <h3>Pentest Pilot</h3>
             <span class="project-company">Personal / Open Source</span>
           </div>
           <p class="project-desc">
@@ -526,6 +565,7 @@
             <span class="tag-sm">Docker</span>
             <span class="tag-sm">ChromaDB</span>
           </div>
+          <a href="https://marcrabadan.github.io/pentest-pilot" class="project-link" target="_blank" rel="noopener">marcrabadan.github.io/pentest-pilot &rarr;</a>
         </div>
 
       </div>
