@@ -43,9 +43,15 @@
   <section id="hero">
     <div class="container hero-container">
       <div class="hero-content">
-        <p class="hero-eyebrow">Hi, I'm</p>
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          Open to Staff / Principal roles
+        </div>
         <h1>Marc Rabadán<br><span class="hero-accent">Fuertes</span></h1>
-        <p class="hero-role">Staff Software Engineer – Platform &amp; Distributed Systems</p>
+        <p class="hero-role">
+          <span class="hero-role-prefix">Staff Software Engineer ·</span>
+          <span id="typewriter"></span><span class="type-cursor"></span>
+        </p>
         <p class="hero-tagline">
           Designing, scaling, and operating cloud-native, event-driven platforms that process
           <strong>10M+ events per day</strong> with strong guarantees around reliability,
@@ -64,20 +70,23 @@
         </div>
       </div>
       <div class="hero-visual">
-        <div class="hero-card">
-          <div class="hero-stat">
-            <span class="stat-num">10+</span>
-            <span class="stat-label">Years Experience</span>
+        <div class="terminal">
+          <div class="terminal-bar">
+            <span class="t-dot t-red"></span>
+            <span class="t-dot t-yellow"></span>
+            <span class="t-dot t-green"></span>
+            <span class="terminal-title">marc@barcelona — zsh</span>
           </div>
-          <div class="stat-divider"></div>
-          <div class="hero-stat">
-            <span class="stat-num">10M+</span>
-            <span class="stat-label">Events / Day</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="hero-stat">
-            <span class="stat-num">99.9%</span>
-            <span class="stat-label">Uptime Mindset</span>
+          <div class="terminal-body">
+            <p><span class="t-prompt">$</span> whoami</p>
+            <p class="t-out">staff-engineer · platform &amp; distributed-systems</p>
+            <p><span class="t-prompt">$</span> uptime --career</p>
+            <p class="t-out">10+ years in production</p>
+            <p><span class="t-prompt">$</span> kubectl top platform</p>
+            <p class="t-out"><span class="t-key">events/day:</span> 10M+&nbsp;&nbsp;<span class="t-key">availability:</span> 99.9%</p>
+            <p><span class="t-prompt">$</span> stack --core</p>
+            <p class="t-out">python · kafka · rabbitmq · kubernetes</p>
+            <p><span class="t-prompt">$</span> <span class="t-blink">▊</span></p>
           </div>
         </div>
       </div>
