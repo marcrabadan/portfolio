@@ -829,6 +829,20 @@ section {
   gap: 6px;
 }
 
+.project-link {
+  align-self: flex-start;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.project-link:hover {
+  border-bottom-color: var(--accent);
+}
+
 /* =====================
    CONTACT
    ===================== */
